@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Overflow Transformation Animations</title>
+        <style>
+    .one p{
+        width: 220px;
+        height: 180px;
+        border: 1px solid blue;
+        padding: 10px 10px;
+        overflow: auto;
+        }
+                                    /*second text*/
+    .main{
+        width: 220px;
+        height: 200px;
+        border: 1px solid black;
+        overflow: auto;
+        }
+                                /*the transform effect*/
+    .two{
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    display: block;
+    background-color: blue;
+    border: 1px solid yellow;
+    text-align: center;
+    vertical-align: justify;
+    overflow: auto;
+    padding-top: 50px;
+    transition: 4s;
+    transition-timing-function: ease-in-out;
+    }
+    .two:hover{
+    transform: translate(350px, 20px) rotate(360deg);
+    border-radius: 50%;
+    /*transform: scale(-1.2);
+    transform: rotateY(360deg);*/
+    background: limegreen;
+    }
+    .three{
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    display: block;
+    background-color: red;
+    border: 1px solid yellow;
+    overflow: auto;
+    padding-top: 70px;
+    text-align: justify;
+    transition: 4s;
+    transform: skew(280ded) scale(1.5);
+    box-shadow: 5px 5px 5px grey;
+    transform: translate(-50% -50%);
+    }
+    .three:hover{
+        transform: scale(-1.2);
+        border-radius: 50%;
+        transform: rotateY(-360deg);
+        background: limegreen;
+    }
+    .four{
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    display: block;
+    background-color: orange;
+    border: 1px solid black;
+    overflow: auto;
+    padding-top: 70px;
+    text-align: justify;
+    transition: 4s;
+    transform: skew(280ded) scale(1.5);
+    box-shadow: 5px 5px 5px grey;
+    
+    }
+    .four:hover{
+        transform: translate(-360px, 20px) rotate(360deg);
+        border-radius: 50%;
+        background: silver;
+    }
+    .cubic-bezier{
+        
+         width: 100px;
+         height: 100px;
+         background: red;
+         color: silver;
+         transition: 2s;
+         transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+    .cubic-bezier:hover {
+         width:400px;
+}
+    
+                                /*bezierEffect*/
+    .bezierEffect {
+        width: 350px;
+        height: 40px;
+        background-color: blue;
+        animation-name: slidein;
+        color: white;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; 
+        text-align: center;
+        padding-top: 5px;
+    }
+    @keyframes slidein {
+        from{
+            margin-left: 50%;
+            width: 20%;
+        }
+        to{
+            margin-left: 0%;
+            width: 100%;
+            background: black;
+        }
+    }
+                                /*spiral Effect*/
+    .spiralEffect{
+        margin: auto;
+        margin-top: 10%;
+        height: 200px;
+        width: 200px;
+        background: silver;
+        animation-name: fade;
+        animation-duration: 3s;
+        animation-iteration-count:infinite; 
+        padding: 5px;
+        overflow: auto;
+        border: 10px solid blue;
+        box-shadow: 5px 5px 5px 20px orange;
+        
+    }
+    @keyframes fade{
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        transform: rotate(90deg);
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        transform: rotate(80deg);
+         
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: chartreuse;
+        transform: rotate(190deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        transform: rotate(50deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: orchid;
+        transform: rotate(90deg);
+    }
+    }
+                                /*typingAnnimation*/
+.typingAnnimation{
+        background: white;
+        color: black;
+        width: 65ch;                    /*characters No*/
+        margin-left: 300px;  
+    }
+.typingAnnimation h1{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .25em;
+    border-right: 3px solid black;
+    animation: printing 3.5s steps(11,end) infinite, blink .5s step-end infinite;
+}
+@keyframes printing
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink
+{
+    from, to{
+border-color: transparent;
+    } 50%{
+        border-color:orange;
+    }
+    
+}
+        </style>
+    </head>
+<body>
+     <div class='one'> 
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Facere, voluptas autem? Aut laboriosam vitae reprehenderit 
+            excepturi ab, quasi dolores non molestiae provident 
+            praesentium! Autem eligendi culpa atque expedita corporis unde?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Saepe necessitatibus esse voluptate eos dolore dolor 
+            consectetur tempora? Amet vitae explicabo accusamus. Nihil 
+            molestias ab ipsum vero quidem amet aperiam placeat?
+        </p>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <hr>
+<div class="main">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Labore impedit modi, suscipit aut illo ea ex nihil laborum, 
+        assumenda quaerat doloribus quod magnam dolore obcaecati. 
+        Placeat harum esse, culpa praesentium quaerat tempore rem, 
+        nihil velit ducimus aperiam voluptates dolore totam tenetur 
+        aliquam omnis doloribus qui commodi odio recusandae veritatis! 
+        Libero.
+    </p>
+</div>
+<br>
+<hr>
+<hr>
+<div class="two">
+     <p> this is the flip and transform and background-color effect.</p>
+</div>
+<div class="three">
+    <p>This is the flip and transform etc. effect</p>
+</div>
+<div class="four">
+    <p>This is the third box with fliping and transform effect</p>
+</div>
+<div class="cubic-bezier">
+<p>This is the cubic bezier effect</p>
+</div>
+<br>
+<hr>
+<hr>
+<div class="bezierEffect">
+<p>This is another bezier effect.</p>
+</div>
+<br>
+<hr>
+<hr>
+<div class="spiralEffect">
+  
+</div>
+<br>
+<hr>
+<hr>
+<hr>
+<div class="typingAnnimation">
+ <h1>Hallo world this is Me!</h1>
+</div>
+<br>
+<hr>
+<hr>
+</body>
+</html>
