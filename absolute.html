@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+* {
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 0;
+        }
+        div{
+            display:inline-block;
+            border: 1px solid black;
+            background: yellow;
+            padding: 15px 25px 15px 25px;
+            margin: 10px;
+        }
+        .realtive{
+            position: relative;
+            top:10px;
+            left:20px;
+        }
+        .absolute{
+            position: absolute;
+            left:300px;
+            z-index: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="absolute">absolute parent of absolute child</div>
+        <div class="absolute">absolute child of absolute</div>
+    </header>
