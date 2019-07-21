@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Google Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <style>
+        
+
+        :root {
+            --mycolor : red;
+            --favoritecolor :yellow;
+            --background : pink;
+            --gradient: green;
+            --fontsize: 3em;
+        }
+
+        body {
+            background: linear-gradient(var(--background),var(--gradient));
+        }
+
+        .font-color {
+            color: var(--mycolor) ; }
+
+        .font-color p {
+            font-variant: small-caps;
+            /* font-size: 2em; */
+            font-size: var(--fontsize);
+        }
+
+        .font-color h3 {
+            color: var(--favoritecolor);
+          /*  color: rgb(50, 115, 100); */
+           
+          
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+
+        .font-size {
+            height: 60vh;
+
+
+        }
+
+        .font-normal {
+            font-size: 2em;
+            /* the value is relative to thr parent's font size*/
+            font-style: oblique;
+            font-weight: bold;
+            text-decoration: overline;
+        }
+
+        .font-em {
+
+            font-size: 90%;
+            /* the value is relative to thr parent's font size*/
+            font-style: italic;
+            font-variant: small-caps
+        }
+
+        .smaller-font {
+            font-size: smaller;
+            font-style: bold;
+        }
+
+        .font-weight {
+            font-weight: bold;
+            text-indent: -20px;
+        }
+
+        .letter-spacing {
+            letter-spacing: 2px;
+        }
+
+        .line-height {
+            line-height: 35px;
+            text-indent: 40px;
+            border: 1px solid black;
+            font-family:  'Lobster', cursive;
+        }
+
+        .text-decoration {
+            text-decoration: line-through;
+        }
+
+        .text-overflow {
+            border: 1px solid black;
+            max-width: 10px;
+            text-overflow: ellipsis;
+
+        }
+
+        .text-shadow {
+            text-shadow: 10px 2px 10px red;
+        }
+
+        .text-transform {
+            text-transform: uppercase;
+
+        }
+
+        .word-spacing {
+            word-spacing: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="font-color">
+        <h3>transparent</h3>
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ex quo inventore facilis nesciunt
+            eaque aliquam voluptatem repellat officia voluptas?</P>
+
+    </div>
+
+    <div class="font-size"> the value is relative to thr parent's font size
+        <h3 class="font-normal">normal h3</h3>
+        <h3 class="font-em">font size</h3>
+        <p class="smaller-font">text size is smaller </p>
+        <p class="font-weight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, molestiae.</p>
+        <p class="letter-spacing">Lorem ipsum dolor sit amet.</p>
+        <p class="line-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio accusantium eveniet
+            beatae, blanditiis, aut non dolore eos nam distinctio iste ab commodi doloremque quidem doloribus nobis
+            nesciunt porro et. Laudantium pariatur, veniam, beatae aut eligendi ab doloremque explicabo aliquid in,
+            ipsa repellat tempora ipsam. Itaque a pariatur quia atque esse, impedit fuga qui nemo culpa laudantium, cum
+            tenetur voluptatibus sit nobis eos suscipit nesciunt accusamus et est sint explicabo in!
+            <p class="text-decoration">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, eum!</p>
+            <p class="text-overflow">this is a paragraph</p>
+            <p class="text-shadow">this is a shadow</p>
+            <p class="text-transform">Removes any text transformation: the text will appear the same as in the HTML
+                code.</p>
+            <h2 class="word-spacing">word spacing</h2>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
