@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+        table{
+ padding:20px;
+ margin:20px;
+ text-align: center;
+}
+
+
+table tr th {
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            background: black
+        }
+
+        table tr td {
+            padding: 10px;
+        }
+         td{
+            border:1px solid black
+        }
+
+th{
+    border:1px solid black
+}
+
+ tr:nth-child(3){
+     color:red;
+
+ }
+
+ tr:nth-child(n+6){
+     color:blue;
+ }
+
+ label[class="attr"]{
+     color:blue;
+     font-weight:bold;
+     font-size: large;
+ }
+
+ label[class="colr"]{
+     color:brown;
+     font-weight:bold;
+     font-size: large;
+ }
+input[type="checkbox"]:checked
+
+
+label{
+    margin:3px; }
+
+.modify{
+    width:500px;
+    height:100%;
+    padding: 10px;
+    
+}
+/*div a {
+    margin-top:10px;
+    padding-bottom:30px
+}*/
+[target="specific"]{
+    border:1px solid black;
+    background:yellow;
+    color: teal; 
+    padding-top:10px;
+    padding-bottom:10px;  
+}
+
+[target="fluffy"]{
+    border:1px solid black;
+    background:yellow;
+    color: teal; 
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/* images*/
+
+    div img{
+        height:80px;
+        padding:5px;
+        margin:5px;
+    }
+    [title~="sky"]{
+        width: 100px;
+        border:4px dashed red;
+        padding:1px;
+        height:100px;
+    }
+div {
+    margin:30px;
+}
+
+/* span*/
+    div span:nth-child(-n+3){
+        color:yellowgreen;
+        font-size: large;
+        font-weight:bold;
+    }
+
+    div span:last-child{
+        color:blue;
+        font-size:large;
+        font-weight:bold;
+    }
+    span::after{
+        content:",";
+        color:black
+    }
+    .fullstop::after{ 
+        content:"";
+
+    }
+    
+
+
+    /* NOT */
+
+    div label{
+        font-size:large;
+        padding:10px;
+      
+    }
+
+  div label:not(.different){
+        text-decoration: line-through;      
+    }
+
+    /*Use :nth-child()*/
+    button{
+        margin:10px;
+    }
+    #question7 label {
+        text-decoration: none;
+    }
+    
+   .edit{
+       font-weight:bold;
+   }
+   .edit::after{
+        content: "(default)";
+        padding:5px;
+        font-size:small;
+        
+    }
+    /* Use Combinators/ Pseudo-Classes */
+
+.xx{
+    box-shadow: 5px;
+}
+div .xx:active{ 
+    background-color:pink;
+    
+
+}
+
+div .box2:active{
+    background:lightblue;
+}
+.box2{
+    box-shadow: 5px;
+}
+
+div .box3:active{
+    background:plum;
+}
+.box3{
+    box-shadow: 5px;
+}
+
+/*Use Pseudo-Classes/Combinators*/
+.p-style  p{
+    background: grey;
+    color:black;
+    font-size: large;
+    padding:15px;
+}
+
+div + p{
+    background-color:peru;
+    color:white;
+    font-size:x-large;
+    padding:17px;
+}
+#placeholder{
+   padding:5px;
+    margin:5px;
+}
+
+/*Q10. Use Pseudo-Classes/Combinators*/
+.main-container{
+    display:flex;
+    padding:15px;
+    font-size: large;
+    font-weight:bold
+} 
+
+ul{
+    list-style-type:disc;
+}
+.container2{
+   margin-left:30px;
+}
+.container1 ul li:nth-child(2){
+    color:red;
+
+}
+.container1 ul li:nth-child(3){
+    color:green;
+}
+.container1 ul li:nth-child(6){
+    color:blue;
+}
+
+.container1 ul li:nth-child(7){
+    color:lightgreen;
+}
+.container2 ul li:nth-child(1){
+    color:palevioletred;
+}
+.container2 ul li:nth-child(4){
+    color:yellowgreen;
+    text-decoration: line-through;
+}
+.container2 ul li:nth-child(6){
+    color:brown;
+}
+.container2 ul li:nth-child(7){
+    color:gray;
+}
+.addtxt::after{
+    content: "(2nd from end)";
+    color:darkgrey;
+    font-size: medium;
+
+}
+
+/* Q11. Use Pseudo-Classes/Combinators*/
+.main-block{
+    display:block;
+    width:150px;
+    height:100%;
+    margin-left:1060px
+}
+.block1 p::first-letter{
+    color:blue;
+    font-size:45px;
+    font-weight:bolder; 
+}
+.block1 p::first-line{
+    color:red;
+}
+mark{
+color:white;
+ background-color:darkgrey !important;
+ font-size:large;
+ font-weight:bold
+}
+
+/*Q14  */
+
+#target p:first-of-type(1){
+    color:green;
+}
+#target p::first-letter{
+    color:red;
+}
+#target>:nth-child(1){
+    color: greenyellow;
+
+}
+#target p{
+    color:grey;
+}
+</style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Location</th>
+            <th>Temprature</th>
+        </tr>
+
+        <tr>
+            <td>London</td>
+            <td>21°C</td>
+        </tr>
+
+        <tr>
+            <td>New York</td>
+            <td>16°C</td>
+        </tr>
+
+        <tr>
+            <td>Rome</td>
+            <td>23°C</td>
+        </tr>
+
+        <tr>
+            <td>Berlin</td>
+            <td>14°C</td>
+        </tr>
+
+        <tr>
+            <td>Sydeny</td>
+            <td>25°C</td>
+        </tr>
+        <tr>
+            <td>Reyjkavik</td>
+            <td>10°C</td>
+        </tr>
+
+        </table>
+
+
+        <input type="checkbox">
+        <label class="attr">Apple</label><br>
+
+        <input type="checkbox">
+        <label class="colr">Orange</label><br>
+
+        <input type="checkbox">
+        <label class="attr">Pear</label><br>
+
+        <input type="checkbox">
+        <label class="attr">Grape</label><br>
+
+        <input class="test" type="radio">
+        <label>plum</label><br>
+
+        <input type="radio">
+        <label>Pineapple</label><br>
+
+        <input type="radio">
+        <label>Mango</label><br><br>
+        <input type="text">
+        <p>Enter Fruit</p>
+
+
+<!--links-->
+
+<div class="modify">
+<a href="#">this is alink with no target attribute</a><br>
+<a href="#" target="specific">this is alink with a specific target attribute</a><br>
+<a href="#"target="">this is alink with an empty target attribute</a><br>
+<a href="#"target="fluffy">this is alink with a fluffy target attribute</a><br>
+
+</div>
+
+<!--images-->
+<div>
+<img src="./assets/1047.png" width="100px">
+<img src="./assets/fieldr.jpeg" width="90px">
+<img src="./assets/sky.jpeg" title="sky" width="90x">
+
+
+<!--Demonstarting Case insensitive-->
+ <div>
+<span>Oak</span>
+<span>cedar</span>
+<span>Ash</span>
+<span>Maple</span>
+<span class="fullstop">Beech</span>
+
+
+ </div>
+
+
+
+
+ <!--NOT-->
+ <div>
+<input type="checkbox">
+<label>Eat breakfast</label><br>
+<input type="checkbox">
+<label class="different">clean car</label><br>
+<input type="checkbox">
+<label>Grocery shopping</label><br>
+<input type="checkbox">
+<label>play games</label><br>
+<input type="checkbox">
+<label>take a nap</label><br>
+<input type="checkbox">
+<label class="different">do some work</label><br>
+</div>
+
+<!-- Use :nth-child()-->
+<div id="question7">
+        <input type="checkbox">
+        <label>Eat breakfast</label><br>
+        <input type="checkbox">
+        <label>clean car</label><br>
+        <input type="checkbox">
+        <label class="edit">Grocery shopping</label><br>
+        <input type="checkbox">
+        <label class="edit">play games</label><br>
+        <input type="checkbox">
+        <label class="edit">take a nap</label><br>
+        <input type="checkbox">
+        <label>do some work</label><br>
+        <button>Reset</button>
+
+
+    </div>
+    <!--Use Combinators/ Pseudo-Classes-->
+
+    <div>
+        <sapn>Enter Work E-mail<sup>*</sup></span><input type="text" class="xx"><br><br>
+            <sapn>Enter personal E-mail</span><input type="text" class="box2"><br><br>
+                <sapn>favorite website?</span><input type="text" class="box3"><br><br>
+
+
+
+
+    </div>
+
+
+    <!--Use Pseudo-Classes/Combinators-->
+
+    <div class="p-style">
+<p>Just a standard text which is read only</p>
+</div>
+<p> However you can edit this content! Go ahead and click me to change the text.</p>
+<input type="text" placeholder="Placeholder text..." id="placeholder">
+
+<hr>
+<!--Q10. Use Pseudo-Classes/Combinators-->
+<h2>Shopping List</h2>
+<box class="main-container">
+<box class="container1">
+<ul>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Soap</li>
+    <li>Tomatoes</li>
+    <li>Pasta</li>
+    <li>Washing Powder</li>
+    <li>Salt</li>
+    <li>Baked Beans</li>
+</ul>
+</box>
+<box class="container2">
+    <ul>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Soap</li>
+    <li>Tomatoes</li>
+    <li>Pasta</li>
+    <li>Washing Powder</li>
+    <li class="addtxt">Salt</li>
+    <li>Baked Beans</li>
+
+</ul>
+
+</box>
+
+
+</box>
+<hr>
+<!--Q11. Use Pseudo-Classes/Combinators-->
+
+<box class="main-block">
+    <box class="block1">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis maxime fugiat sint perspiciatis dolorem qui placeat, rem exercitationem cum possimus eaque, aspernatur vero non magni tempore delectus eligendi ratione quasi?</p>
+
+
+    </box>
+
+    <box class="block2">
+
+        <p><mark>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio libero deserunt nulla ea beatae quidem quis perferendis officia repellendus laudantium. Mollitia tempore molestiae iusto deserunt at quidem nobis hic vel?</mark></p>
+
+    </box>
+
+</box>
+<br>
+<hr>
+<div id="target">
+        <h2>Where the Buggalo Roam</h2>
+        <p>Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew. No! Don't jump! Dr. Zoidberg, that doesn't make sense.</p>
+        
+        <div>
+        <p>Does anybody else feel jealous and aroused and worried?</p>
+        
+        </div>
+        <h2>The Mutants Are Revolting</h2>
+        <p>But, okay! I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense.</p>
+        
+        <h2>Space Pilot 3000</h2>
+        <p>Now, now. Perfectly symmetrical violence never solved anything.</p>
+        
+        </div>
+                
+</body>
+
+</html>
