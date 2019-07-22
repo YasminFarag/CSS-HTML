@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 0;
+        }
+
+        .box1 {
+            border: 1px solid black;
+            background: yellow;
+            padding: 15px 25px 15px 25px;
+            margin: 10px;
+
+        }
+
+        .box2 {
+            
+            border: 1px solid black;
+            background: blue;
+            padding: 15px 25px 15px 25px;
+            margin: 10px;
+        }
+
+        .box3 {
+            border: 1px solid black;
+            background: yellow;
+            padding: 15px 25px 15px 25px;
+            margin: 10px;
+
+        }
+        div :nth-child(odd) {
+            border: 1px solid black;
+            background: yellow;
+            padding: 25px 15px 25px 15px;
+            margin-top: 30px;
+            width: 300px;
+            height: 100px;
+        }
+        div :nth-child(even) {
+            border: 1px solid black;
+            background: blue;
+            padding: 25px 15px 25px 15px;
+            margin-top: 30px;
+            width: 300px;
+            height: 100px;
+        }
+
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 20px;
+
+        }
+
+        .absolute {
+            position: absolute;
+            left: 300px;
+
+        }
+
+       .footer{
+           border:1px solid black;
+           background:yellowgreen !important;
+           width:100%;
+           height:100px;
+           position: sticky;
+           top:0;
+           bottom:0;
+
+
+       }
+       .fixed{
+           position: fixed;
+           top:100px;
+           right:0;
+           background:tomato !important;
+       }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="box1">i'm an inline -block div</span>
+        <span class="box2 relative">i'm an inline -block div</span>
+        <span class="box3">i'm an inline -block div</span>
+    </header>
+    <div>
+        <div >relative</div>
+        <div class="absolute">absolute</div>
+        <div >Random Div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div class="fixed">i am fixed</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <footer class="footer">I'm a sticky</footer>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+        <div >random div</div>
+
+
+    </div>
+    
+</body>
+
+</html>
