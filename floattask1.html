@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>     
+    
+    .container{
+        box-sizing: border-box;
+        width:650px;
+        height:560px;
+        border: 1px solid gray;
+        position: relative;
+        left: 280px;
+        top:50px;
+    }
+    .header{
+        width: 650px;
+        height:60px;
+    }
+    .button1{
+        position: absolute;
+        left: 350px;
+        border: 1px solid black;
+        padding: 10px 40px;
+        margin: 10px;
+    }
+    .button2{
+        float: right;
+        width:auto;
+        border:1px solid black;
+        padding: 10px 40px;
+        margin: 10px;
+        background: lightgrey;
+
+    }
+    
+    
+    .main-container{
+        padding-left:20px
+    }
+    img{
+        float:right;
+        padding:10px;
+
+    }
+    footer{
+        position: relative;
+        height:60px;
+        width:650px;
+        display: flex;
+    }
+    .footer2{
+        float:right;
+        position: absolute;    
+        left: 590px;
+        top:30px;
+    }
+    .footer1{
+        clear:right;
+        position: absolute;
+        top: 30px;
+        margin-left: 10px;
+    }
+
+
+     </style>
+
+        </head>
+        <body>
+            <div class="container">
+
+         <div class="header">
+            <span class="button1">Home</span>
+             <span class="button2">About</span>
+         </div>       
+         <hr>
+         <div class="main-container">
+             <img src="assets/sky.jpeg" alt="profile ">
+            <h1>About me</h1>
+            <p>i'm a web professional work in a web development for more than 15 years now and it's all fun!</p>
+            <br>
+
+            <h3>Hobbies</h3>
+            <ul> 
+            <li>Reading</li>
+            <li>web development</li>
+            <li>Social Engagment</li>
+        </ul>
+
+        <br>
+
+<h3>Favorite Quote</h3>
+<p>"Life's is what happens" to us while we are making other plans."</p>
+<p>(Alen Saunders)</p>
+<hr>
+</div>
+<footer>
+    <span class="footer1">Copyright 2017- Dominik Hanke </span>
+    <span class="footer2">Imprint</span>
+</footer>
+
+
+        </body>
+        </html>
