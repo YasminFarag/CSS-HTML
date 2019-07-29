@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        h1 {
+            color: brown;
+        }
+
+        p[target="_round"] {
+            background-color: blueviolet
+        }
+
+        p[target="_color"] {
+            color: red;
+        }
+
+        [title~=flower] {
+            border: 2px solid orangered;
+        }
+
+        [class|=top] {
+            background-color: palevioletred;
+        }
+
+        [class^=text] {
+            background-color: aqua;
+        }
+
+        [class$="test"] {
+            background-color: crimson;
+        }
+
+        [class*="te"] {
+            color: brown
+        }
+
+        div~p {
+            color: violet
+        }
+
+        p:last-child {
+            color: blue
+        }
+
+        p:first-child {
+            color: yellow
+        }
+
+        h1:nth-child(1) {
+            color: yellowgreen;
+        }
+
+
+        p:nth-child(even) {
+            background: yellowgreen
+        }
+
+        p:nth-child(2n +1) {
+            background: teal
+        }
+
+        li:not(.different) {
+            font-size:1.5em;
+            color:blue;
+        }
+       /*div{
+            background:yellow;
+            padding:20px;
+            
+        }
+        span:hover {
+            color:yellow;
+
+        }*/
+
+        h1:active{
+            background:olive
+        }
+        button:active{
+            background:orange
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1>Tag Selector</h1>
+    <button>click</button>
+    <h1>Tag Selector</h1>
+    <h1>Tag Selector</h1>
+    <h1>Tag Selector</h1>
+    <div>
+        <p>ppppppppppppppppppppp</p>
+        <p target="_round">hello world</p>
+        <p target="_color">3rd paragraph in the div</p>
+    </div>
+    <img src="./assets/1047.png" title="flower" width="224" height="162">
+    <p class="top-header">4th paragraph</p>
+    <p class="text-top">five paragraph</p>
+    <p class="test">six paragraph</p>
+    <p class="test">five paragraph</p>
+    <p class="test">five paragraph</p>
+
+    <!--descendant selectors -->
+    <div>
+
+        <p>hello world</p>
+        <p>hellowwww</p>
+        <main>
+            <p>hello</p>
+        </main>
+
+    </div>
+
+    <div>
+        <p>paragraph not in a div</p>
+        <p>paragraph not in a div</p>
+        <p>paragraph not in a div</p>
+        <p>paragraph not in a div</p>
+        <p>paragraph not in a div</p>
+        <p>paragraph not in a div</p>
+        <p>this is a paragraph</p>
+        <ul>
+
+            <li> list item 1</li>
+            <li class="different">list item 2</li>
+            <li>list item 3</li>
+        </ul>
+
+      <!-- <h3>Hover over me ! </h3>
+        
+        <div>i will show on hover</div>--> 
+</body>
+
+</html>
