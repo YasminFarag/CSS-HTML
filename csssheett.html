@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> HTML5 Introduction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+    #idselector {
+
+        background-color: red;
+    }
+    .classSelector{background-color: blue;
+    }
+    .classfont{
+        font-size: 30px;
+        font-weight:bold;
+    }
+    h3 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size:20px;
+    }
+    .test{
+        font-family: cursive;
+        background-color: palegreen;    
+    }
+    .pseudoselector {
+        background-color: pink
+    }
+    .pseudoselector:hover {
+        background-color: white;
+    }
+
+    .pseudoelement::first-line{
+        font-size: 20px;
+        background-color: olivedrab;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    
+    
+    </style>
+    </head>
+    <body>
+        <h1>Ids and Classes</h1>
+        <p id="idselector">this element has an id</p>
+        <p id="idselector">this element has an id</p>
+
+        <p class='classSelector classfont' id="idselector" style="background-color:rebeccapurple">this element has an id</p>
+
+        <h3>formatting and styling</h3>
+
+        <p class="test">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quae, iure laborum placeat illo perferendis itaque quos, ex optio aut explicabo molestiae magnam at odit repellendus labore voluptates nulla natus quidem commodi illum quasi soluta alias quo! Eius ipsam animi sed nostrum corporis, accusamus quaerat iste consequuntur tempora, quo dolores.</p>
+        <p class="pseudoselector">this is pseudo selector</p>
+        <p class="pseudoelement"> pseudo selector<br> are cool</p>
+    
+    </body>
+    </html>
