@@ -1,0 +1,40 @@
+@mixin paragraph {
+    color:blue;
+    font: {
+        size: 50px;
+        family: "roboto";
+    }
+    
+}
+
+@mixin border {
+    border: {
+        color: red;
+        style: solid;
+        width: 5px;
+    }
+}
+
+
+
+@mixin box ($border-color, $padding-border) {
+    border: 10px solid $border-color;
+    padding: $padding-border;
+    box-shadow: 0 0 30px black;
+    
+}
+
+
+p {
+    @include paragraph;
+    @include border;
+}
+
+
+.container {
+    @include box (green, 10px);
+}
+
+.child {
+    @include box(purple, 5px);
+}
